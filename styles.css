@@ -1,0 +1,134 @@
+@font-face {
+	font-family: 'Digital-7 Mono';
+	src: url('digital-7.ttf') format('truetype');
+}
+
+body {
+	font-family: Arial, sans-serif;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+
+.timer-container {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	z-index: 10;
+}
+
+#timer {
+	font-family: 'Digital-7 Mono', sans-serif;
+	font-size: 7em;
+	color: #e53935;
+	font-weight: bold;
+	padding: 5px 10px;
+	border-radius: 10px;
+	background-color: #ffebee;
+}
+
+.word-container {
+	font-size: 2.5em;
+	margin: 40px 0;
+	line-height: 1.5;
+	min-height: 1.5em;
+}
+
+.letter {
+	cursor: pointer;
+	padding: 0 2px;
+	transition: all 0.2s;
+}
+
+.letter:hover {
+	background-color: #f0f0f0;
+	border-radius: 3px;
+}
+
+.vowel {
+	color: #1a73e8;
+}
+
+.selected {
+	font-weight: bold;
+	transform: scale(1.2);
+}
+
+.correct {
+	color: #0f9d58;
+}
+
+.incorrect {
+	color: #db4437;
+	text-decoration: underline;
+}
+
+.stats {
+	margin: 20px 0;
+	font-size: 1.2em;
+	font-weight: bold
+}
+
+.correct-stats {
+	color: #0f9d58;
+}
+
+.incorrect-stats {
+	color: #db4437;
+}
+
+.percentage-stats {
+	color: #0f9d58;
+}
+
+.progress {
+	width: 100%;
+	height: 10px;
+	background-color: #f0f0f0;
+	margin: 20px 0;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.progress-bar {
+	height: 100%;
+	background-color: transparent;
+	background-image: linear-gradient(to right, #0f9d58 var(--correct-percentage), transparent var(--correct-percentage));
+	width: 100%;
+	transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.progress.has-incorrect .progress-bar {
+	background-color: #db4437;
+}
+
+button {
+	background-color: #1a73e8;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 1em;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 10px;
+}
+
+button:hover {
+	background-color: #0d5bba;
+}
+
+.instructions {
+	margin: 20px 0;
+	padding: 15px;
+	background-color: #f8f9fa;
+	border-radius: 5px;
+	text-align: left;
+}
+
+.context {
+	font-style: italic;
+	color: #777;
+	font-size: 0.8em;
+	margin-left: 5px;
+}
